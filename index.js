@@ -1,12 +1,14 @@
 class human{
-    constructor(name,age){
+    constructor(name, age, gendre){
         this.name = name;
         this.age = age ||1;
+        this.gendre = gendre
     }
 }
 const welly = new human("welly", 22);
 
 console.log(welly);
+
 
 class employee extends human{
     constructor (name, age, profession, salary){
@@ -22,9 +24,27 @@ class boss extends human{
         this.income = income;
     }
 }
-const fuad = new employee ("fuad", 23, "Developer", 5000000);
-const merry = new boss ("merry", 28, "Frying Vegetables", 2000000);
+const indra = new employee ("indra", 23, "Developer", 5000000);
+const jamale = new boss ("jamale", 28, "Businessman", 2000000);
 
-console.log(fuad);
-console.log(merry);
+console.log(indra);
+console.log(jamale);
 
+
+class people{
+    constructor(name, age, gendre){
+        this.name = name;
+        this.age = age ||1;
+        this.gendre = gendre;
+    }
+    walk(){
+        console.log(`${this.name} is walking`);        
+    }
+    run(){
+        console.log(`${this.name} is running`);
+        
+    }
+}
+const dilla = new people("dilla", 24, "Female");
+console.log(dilla);
+dilla.run();
