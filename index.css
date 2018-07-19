@@ -2,3 +2,22 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: azure;
 }
+
+.p{
+    font-size: 20px;
+    color: rgb(243, 231, 231);
+    font-style: bold;
+}
+
+button{
+    padding: 8px 20px;
+    background: rgb(141, 71, 71);
+    border: 1px solid rgb(29, 14, 14);
+    border-radius: 3px;
+}
+
+.alert{
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 25%;
+}
