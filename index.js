@@ -100,3 +100,31 @@ console.log(car1.color);
 console.log(car2.color);
 
 
+class home {
+    constructor(type, color){
+        this.type = type;
+        this.color = color;
+        this.enginestatus ='off'
+    }
+
+    enginestart(){
+        this.enginestatus = 'on'
+        console.log('engine start');
+        
+    }
+
+    enginestop(){
+        this.enginestatus = 'off'
+        console.log('engine start');
+    }
+
+    static isengineon(home){
+        if(home.enginestatus === 'on'){
+            console.log('engine on');
+        }
+        else{
+            console.log('engine off');
+            
+        }
+    }
+}
