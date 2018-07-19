@@ -5,9 +5,10 @@ class human{
         this.gendre = gendre
     }
 }
-const welly = new human("welly", 22);
+const welly = new human("Welly", 22);
 
 console.log(welly);
+document.getElementById("humaaan").innerHTML = welly.name;
 
 
 class employee extends human{
@@ -29,6 +30,7 @@ const jamale = new boss ("jamale", 28, "Businessman", 2000000);
 
 console.log(indra);
 console.log(jamale);
+document.getElementById("employ").innerHTML = indra.profession;
 
 
 class people{
