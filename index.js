@@ -48,3 +48,55 @@ class people{
 const dilla = new people("dilla", 24, "Female");
 console.log(dilla);
 dilla.run();
+
+
+function Person(){
+}
+Person.prototype.name = "welly";
+Person.prototype.age = 22;
+Person.prototype.me = function(){
+    console.log(this.name);
+}
+
+var person1 = new Person();
+console.log(person1.name);
+
+function Motorcycle(){    
+}
+
+Motorcycle.prototype.brand = "Beat"
+Motorcycle.prototype.machine = "Honda"
+Motorcycle.prototype.color = ['Red', 'Blue', 'Black']
+Motorcycle.prototype.sayname = function(){
+    console.log(this.brand);    
+}
+
+var motorcycle1 = new Motorcycle();
+var motorcycle2 = new Motorcycle();
+
+motorcycle1.color.push("pink");
+
+console.log(motorcycle1.color);
+console.log(motorcycle2.color);
+
+function car (brand, machine){
+    this.brand = ["Avanza", "Grand Max", "Jazz", "ferrari"],
+    this.machine = machine,
+    this.color = ["yellow", "gray", "silver"]
+}
+
+car.prototype.yeah = function(){
+    console.log(this.brand);
+}
+
+var car1 = new car ();
+var car2 = new car ();
+
+console.log(car1.yeah === car2.yeah)
+
+car1.color.push("green");
+
+console.log(car1.color);
+console.log(car2.color);
+
+
