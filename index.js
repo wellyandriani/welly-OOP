@@ -8,7 +8,7 @@ class human{
 const welly = new human("Welly", 22);
 
 console.log(welly);
-document.getElementById("humaaan").innerHTML = welly.name;
+document.getElementById("output1").innerHTML = "My Nameis" + " " + welly.name;
 
 
 class employee extends human{
@@ -25,12 +25,12 @@ class boss extends human{
         this.income = income;
     }
 }
-const indra = new employee ("indra", 23, "Developer", 5000000);
+const indra = new employee ("Indra", 23, "Developer", 5000000);
 const jamale = new boss ("jamale", 28, "Businessman", 2000000);
 
 console.log(indra);
 console.log(jamale);
-document.getElementById("employ").innerHTML = indra.profession;
+document.getElementById("output2").innerHTML = `${indra.name}, ${indra.age}, ${indra.profession}, ${indra.salary}`
 
 
 class people{
@@ -50,6 +50,7 @@ class people{
 const dilla = new people("dilla", 24, "Female");
 console.log(dilla);
 dilla.run();
+document.getElementById("output3").innerHTML = " Dilla is running" ;
 
 
 function Person(){
@@ -80,15 +81,18 @@ motorcycle1.color.push("pink");
 
 console.log(motorcycle1.color);
 console.log(motorcycle2.color);
+function motorcycle(){
+    document.getElementById("output4").innerHTML = "Vocabulary = " + " "+ motorcycle1.color;
+}
 
-function car (brand, machine){
-    this.brand = ["Avanza", "Grand Max", "Jazz", "ferrari"],
+function car (color, machine){
+    this.color = ["yellow", "gray", "silver"],
     this.machine = machine,
-    this.color = ["yellow", "gray", "silver"]
+    this.brand = ["Avanza", "Grand Max", "Jazz"]
 }
 
 car.prototype.yeah = function(){
-    console.log(this.brand);
+    console.log(this.color);
 }
 
 var car1 = new car ();
@@ -96,37 +100,10 @@ var car2 = new car ();
 
 console.log(car1.yeah === car2.yeah)
 
-car1.color.push("green");
+car1.brand.push("ferrari");
 
-console.log(car1.color);
-console.log(car2.color);
-
-
-class home {
-    constructor(type, color){
-        this.type = type;
-        this.color = color;
-        this.enginestatus ='off'
-    }
-
-    enginestart(){
-        this.enginestatus = 'on'
-        console.log('engine start');
-        
-    }
-
-    enginestop(){
-        this.enginestatus = 'off'
-        console.log('engine start');
-    }
-
-    static isengineon(home){
-        if(home.enginestatus === 'on'){
-            console.log('engine on');
-        }
-        else{
-            console.log('engine off');
-            
-        }
-    }
+console.log(car1.brand);
+console.log(car2.brand);
+function Car(){
+    document.getElementById("output5").innerHTML = "Brand Available =" + " " + car1.brand;
 }
